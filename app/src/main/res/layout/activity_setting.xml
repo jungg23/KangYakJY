@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SettingActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="0dp"
+        android:text="삭제"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 추가"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="저장"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/back_round_with_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/drug_base_img"
+        app:layout_constraintBottom_toBottomOf="@+id/View"
+        app:layout_constraintEnd_toEndOf="@+id/View"
+        app:layout_constraintStart_toStartOf="@+id/View"
+        app:layout_constraintTop_toTopOf="@+id/View" />
+
+    <View
+        android:id="@+id/View2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/back_round_with_stroke"
+        app:layout_constraintEnd_toEndOf="@+id/View"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageplus_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/plus_img_black"
+        app:layout_constraintBottom_toBottomOf="@+id/View2"
+        app:layout_constraintEnd_toEndOf="@+id/View2"
+        app:layout_constraintStart_toStartOf="@+id/View2"
+        app:layout_constraintTop_toTopOf="@+id/View2" />
+
+    <View
+        android:id="@+id/View3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageplus_btn" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="약 이름"
+        app:layout_constraintBottom_toTopOf="@+id/View4"
+        app:layout_constraintStart_toStartOf="@+id/View3"
+        app:layout_constraintTop_toTopOf="@+id/View3" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="비타민D"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View4"
+        app:layout_constraintEnd_toEndOf="@+id/View3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View3"
+        app:layout_constraintTop_toTopOf="@+id/View3" />
+
+    <ImageView
+        android:id="@+id/btn_name"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/et_name"
+        app:layout_constraintEnd_toEndOf="@+id/View3"
+        app:layout_constraintStart_toEndOf="@+id/et_name"
+        app:layout_constraintTop_toTopOf="@+id/et_name" />
+
+    <View
+        android:id="@+id/View4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="양"
+        app:layout_constraintBottom_toTopOf="@+id/View5"
+        app:layout_constraintStart_toStartOf="@+id/View4"
+        app:layout_constraintTop_toTopOf="@+id/View4" />
+
+    <EditText
+        android:id="@+id/tv_howMuch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="60"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View5"
+        app:layout_constraintEnd_toEndOf="@+id/View4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View4"
+        app:layout_constraintTop_toTopOf="@+id/View4" />
+
+    <ImageView
+        android:id="@+id/btn_howMuch"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_howMuch"
+        app:layout_constraintEnd_toEndOf="@+id/View4"
+        app:layout_constraintStart_toEndOf="@+id/tv_howMuch"
+        app:layout_constraintTop_toTopOf="@+id/tv_howMuch" />
+
+    <View
+        android:id="@+id/View5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="측정"
+        app:layout_constraintBottom_toTopOf="@+id/View6"
+        app:layout_constraintStart_toStartOf="@+id/View5"
+        app:layout_constraintTop_toTopOf="@+id/View5" />
+
+    <TextView
+        android:id="@+id/tv_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="알"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View6"
+        app:layout_constraintEnd_toEndOf="@+id/View5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View5"
+        app:layout_constraintTop_toTopOf="@+id/View5" />
+
+    <ImageView
+        android:id="@+id/btn_measure"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_measure"
+        app:layout_constraintEnd_toEndOf="@+id/View5"
+        app:layout_constraintStart_toEndOf="@+id/tv_measure"
+        app:layout_constraintTop_toTopOf="@+id/tv_measure" />
+
+    <View
+        android:id="@+id/View6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="시작"
+        app:layout_constraintBottom_toTopOf="@+id/View7"
+        app:layout_constraintStart_toStartOf="@+id/View6"
+        app:layout_constraintTop_toTopOf="@+id/View6" />
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="2019년 05년 20일"
+        app:layout_constraintBottom_toTopOf="@+id/View7"
+        app:layout_constraintEnd_toEndOf="@+id/View6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View6"
+        app:layout_constraintTop_toTopOf="@+id/View6" />
+
+    <ImageView
+        android:id="@+id/btn_start"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_start"
+        app:layout_constraintEnd_toEndOf="@+id/View6"
+        app:layout_constraintStart_toEndOf="@+id/tv_start"
+        app:layout_constraintTop_toTopOf="@+id/tv_start" />
+
+    <View
+        android:id="@+id/View7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="일정"
+        app:layout_constraintBottom_toTopOf="@+id/View8"
+        app:layout_constraintStart_toStartOf="@+id/View7"
+        app:layout_constraintTop_toTopOf="@+id/View7" />
+
+    <TextView
+        android:id="@+id/et_often"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="매일"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View8"
+        app:layout_constraintEnd_toEndOf="@+id/View7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View7"
+        app:layout_constraintTop_toTopOf="@+id/View7" />
+
+    <ImageView
+        android:id="@+id/btn_often"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/et_often"
+        app:layout_constraintEnd_toEndOf="@+id/View7"
+        app:layout_constraintStart_toEndOf="@+id/et_often"
+        app:layout_constraintTop_toTopOf="@+id/et_often" />
+
+    <View
+        android:id="@+id/View8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="기간"
+        app:layout_constraintBottom_toTopOf="@+id/View9"
+        app:layout_constraintStart_toStartOf="@+id/View8"
+        app:layout_constraintTop_toTopOf="@+id/View8" />
+
+    <EditText
+        android:id="@+id/tv_howLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="3개월"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View9"
+        app:layout_constraintEnd_toEndOf="@+id/View8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View8"
+        app:layout_constraintTop_toTopOf="@+id/View8" />
+
+    <ImageView
+        android:id="@+id/btn_howLong"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_howLong"
+        app:layout_constraintEnd_toEndOf="@+id/View8"
+        app:layout_constraintStart_toEndOf="@+id/tv_howLong"
+        app:layout_constraintTop_toTopOf="@+id/tv_howLong" />
+
+    <View
+        android:id="@+id/View9"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View8" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="수신주기"
+        app:layout_constraintBottom_toTopOf="@+id/View10"
+        app:layout_constraintStart_toStartOf="@+id/View9"
+        app:layout_constraintTop_toTopOf="@+id/View9" />
+
+    <TextView
+        android:id="@+id/tv_alert_often"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="하루에 1번"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View10"
+        app:layout_constraintEnd_toEndOf="@+id/View9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View9"
+        app:layout_constraintTop_toTopOf="@+id/View9" />
+
+    <ImageView
+        android:id="@+id/btn_alert_often"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_alert_often"
+        app:layout_constraintEnd_toEndOf="@+id/View9"
+        app:layout_constraintStart_toEndOf="@+id/tv_alert_often"
+        app:layout_constraintTop_toTopOf="@+id/tv_alert_often" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/View10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/back_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/View9" >
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+        android:id="@+id/View11"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View10" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="알람음 설정"
+        app:layout_constraintBottom_toTopOf="@+id/View12"
+        app:layout_constraintStart_toStartOf="@+id/View11"
+        app:layout_constraintTop_toTopOf="@+id/View11" />
+
+    <TextView
+        android:id="@+id/tv_set_alertMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="기본"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/View12"
+        app:layout_constraintEnd_toEndOf="@+id/View11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View11"
+        app:layout_constraintTop_toTopOf="@+id/View11" />
+
+    <ImageView
+        android:id="@+id/btn_set_alertMusic"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_set_alertMusic"
+        app:layout_constraintEnd_toEndOf="@+id/View11"
+        app:layout_constraintStart_toEndOf="@+id/tv_set_alertMusic"
+        app:layout_constraintTop_toTopOf="@+id/tv_set_alertMusic" />
+
+    <View
+        android:id="@+id/View12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/View11" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="잠금 설정"
+        app:layout_constraintBottom_toBottomOf="@+id/View12"
+        app:layout_constraintStart_toStartOf="@+id/View12"
+        app:layout_constraintTop_toTopOf="@+id/View12" />
+
+    <TextView
+        android:id="@+id/tv_locked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="네"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/View12"
+        app:layout_constraintEnd_toEndOf="@+id/View12"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/View12"
+        app:layout_constraintTop_toTopOf="@+id/View12" />
+
+
+    <ImageView
+        android:id="@+id/btn_locked"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_locked"
+        app:layout_constraintEnd_toEndOf="@+id/View12"
+        app:layout_constraintStart_toEndOf="@+id/tv_locked"
+        app:layout_constraintTop_toTopOf="@+id/tv_locked" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
