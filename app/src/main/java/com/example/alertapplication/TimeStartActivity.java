@@ -25,7 +25,7 @@ public class TimeStartActivity extends AppCompatActivity implements TimePicker.O
         submit = findViewById(R.id.btn_submit8);
         delete = findViewById(R.id.btn_cancel8);
         tp = (TimePicker) findViewById(R.id.tp);
-        time.setText(  hourofDay + ":" + minute );
+        time.setText( hourofDay + ":" + minute );
         tp.setOnTimeChangedListener(this);
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +51,6 @@ public class TimeStartActivity extends AppCompatActivity implements TimePicker.O
 
     @Override
     public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-        time.setText("오전" + hourOfDay + ":" + minute );
+        time.setText(hourOfDay + ":" + minute );
     }
 }

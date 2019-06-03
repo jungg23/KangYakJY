@@ -14,6 +14,8 @@ public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         radioButton1 = findViewById(R.id.radioButton);
@@ -26,9 +28,11 @@ public class SignupActivity extends AppCompatActivity {
                 if(radioButton1.isChecked()){
                     intent.putExtra("check","big");
                     startActivity(intent);
+                    finish();
                 }else if(radioButton2.isChecked()){
                     intent.putExtra("check","small");
                     startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(getBaseContext(),"테마를 선택해주세요.",Toast.LENGTH_SHORT).show();
                 }

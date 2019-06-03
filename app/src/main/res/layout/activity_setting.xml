@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -426,7 +427,7 @@
     <View
         android:id="@+id/View9"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="0.5dp"
         android:background="@drawable/back_view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -441,40 +442,38 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="수신주기"
+        android:text="알람 설정 시간"
         app:layout_constraintBottom_toTopOf="@+id/View10"
         app:layout_constraintStart_toStartOf="@+id/View9"
         app:layout_constraintTop_toTopOf="@+id/View9" />
 
-    <TextView
-        android:id="@+id/tv_alert_often"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:text="하루에 1번"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/View10"
-        app:layout_constraintEnd_toEndOf="@+id/View9"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/View9"
-        app:layout_constraintTop_toTopOf="@+id/View9" />
+        <TextView
+            android:id="@+id/tv_alert_often"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="10dp"
+            android:text="13시 00분"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/View10"
+            app:layout_constraintEnd_toEndOf="@+id/View9"
+            app:layout_constraintTop_toTopOf="@+id/View9" />
 
-    <ImageView
-        android:id="@+id/btn_alert_often"
-        android:layout_width="15dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_alert_often"
-        app:layout_constraintEnd_toEndOf="@+id/View9"
-        app:layout_constraintStart_toEndOf="@+id/tv_alert_often"
-        app:layout_constraintTop_toTopOf="@+id/tv_alert_often" />
+        <ImageView
+            android:id="@+id/btn_alert_often"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_alert_often"
+            app:layout_constraintEnd_toEndOf="@+id/View9"
+            app:layout_constraintStart_toEndOf="@+id/tv_alert_often"
+            app:layout_constraintTop_toTopOf="@+id/tv_alert_often" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/View10"

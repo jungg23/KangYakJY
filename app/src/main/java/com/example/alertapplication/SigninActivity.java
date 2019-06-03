@@ -46,53 +46,41 @@ public class SigninActivity extends AppCompatActivity {
         small_cheak = findViewById(R.id.radioButton2);
         start_btn = findViewById(R.id.start_btn);
 
-        if (first == false) {
-            Log.d("Is first Time?", "first");
-            start_btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    SharedPreferences.Editor editor = appData.edit();
 
-                    // 에디터객체.put타입( 저장시킬 이름, 저장시킬 값 )
-                    // 저장시킬 이름이 이미 존재하면 덮어씌움
+        Log.d("Is first Time?", "first");
+        start_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = appData.edit();
 
-                    if (big_cheak.isChecked()) {
-                        editor.putInt("SAVE_THEME_DATA", 1);
-                    } else if (small_cheak.isChecked()) {
-                        editor.putInt("SAVE_THEME_DATA", 2);
-                    } else {
-                        Toast.makeText(getBaseContext(), "테마를 선택해주세요.", Toast.LENGTH_SHORT).show();
-                    }
-                    editor.putString("LOCK_PW", signIn_password_et.getText().toString().trim());
-                    editor.putBoolean("isFirst", true);
-                    // apply, commit 을 안하면 변경된 내용이 저장되지 않음
-                    editor.apply();
+                // 에디터객체.put타입( 저장시킬 이름, 저장시킬 값 )
+                // 저장시킬 이름이 이미 존재하면 덮어씌움
 
-                    theme = appData.getInt("SAVE_THEME_DATA", 0);
-                    lock_pw = appData.getString("LOCK_PW", "");
-
-                    if (theme == 1) {
-                        Intent intent = new Intent(getBaseContext(), MainActivityBig.class);
-                        startActivity(intent);
-                    } else if (theme == 2) {
-                        Intent intent = new Intent(getBaseContext(), MainActivitySmall.class);
-                        startActivity(intent);
-                    }
-
+                if (big_cheak.isChecked()) {
+                    editor.putInt("SAVE_THEME_DATA", 1);
+                } else if (small_cheak.isChecked()) {
+                    editor.putInt("SAVE_THEME_DATA", 2);
+                } else {
+                    Toast.makeText(getBaseContext(), "테마를 선택해주세요.", Toast.LENGTH_SHORT).show();
                 }
-            });
+                editor.putString("LOCK_PW", signIn_password_et.getText().toString().trim());
+                editor.putBoolean("isFirst", true);
+                    // apply, commit 을 안하면 변경된 내용이 저장되지 않음
+                editor.apply();
 
-        } else {
-            Log.d("Is first Time?", "not first");
+                theme = appData.getInt("SAVE_THEME_DATA", 0);
+                lock_pw = appData.getString("LOCK_PW", "");
 
-            if (theme == 1) {
-                Intent intent = new Intent(getBaseContext(), MainActivityBig.class);
-                startActivity(intent);
-            } else if (theme == 2) {
-                Intent intent = new Intent(getBaseContext(), MainActivitySmall.class);
-                startActivity(intent);
+                if (theme == 1) {
+                    Intent intent = new Intent(getBaseContext(), MainActivityBig.class);
+                    startActivity(intent);
+                } else if (theme == 2) {
+                    Intent intent = new Intent(getBaseContext(), MainActivitySmall.class);
+                    startActivity(intent);
+                }
+
             }
-        }
+        });
+
     }
 }
-

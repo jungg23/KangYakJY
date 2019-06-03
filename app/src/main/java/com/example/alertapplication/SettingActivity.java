@@ -1,6 +1,7 @@
 package com.example.alertapplication;
 
 import android.Manifest;
+import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
@@ -29,7 +31,7 @@ import java.util.List;
 public class SettingActivity extends AppCompatActivity {
 
     ImageView start, alertOften, measure, often, lock, plus;
-    TextView delete_btn, plus_btn, how, aday, alert_often, measureT, oftenT, lockedT, dateT;
+    TextView delete_btn, plus_btn, how, aday, alert_often, measureT, oftenT, lockedT, dateT, setT;
     EditText name;
     String nameS, adayS, time, where, what;
     String num, date;
@@ -37,15 +39,25 @@ public class SettingActivity extends AppCompatActivity {
     final int CAMERA_REQUEST_CODE = 1;
     private File tempFile;
 
+    private TextView textView_Date;
+    private TimePickerDialog.OnTimeSetListener callbackMethod;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+
+        this.InitializeView();
+        this.InitializeListener();
+
+        textView_Date = (TextView)findViewById(R.id.tv_alert_often);
+
         final Intent intent = getIntent();
         imageView = (ImageView)findViewById(R.id.imageView);
         measureT = findViewById(R.id.tv_measure);
         oftenT = findViewById(R.id.tv_locked);
         dateT = findViewById(R.id.tv_start);
+        setT = findViewById(R.id.tv_alert_often);
         plus = findViewById(R.id.imageplus_btn);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,20 +138,20 @@ public class SettingActivity extends AppCompatActivity {
                     Intent intent4 = new Intent(getBaseContext(), MainActivitySmall.class);
                     intent4.putExtra("name", nameS);
                     intent4.putExtra("aday", adayS);
-                    intent4.putExtra("time222",alert_often.getText());
+                    intent4.putExtra("time222",textView_Date.getText());
                     startActivity(intent4);
                 } else {
                     if (where.equals("big")) {
                         Intent intent3 = new Intent(getBaseContext(), MainActivityBig.class);
                         intent3.putExtra("name", nameS);
                         intent3.putExtra("aday", adayS);
-                        intent3.putExtra("time222",alert_often.getText());
+                        intent3.putExtra("time222",textView_Date.getText());
                         startActivity(intent3);
                     } else if (where.equals("small")) {
                         Intent intent4 = new Intent(getBaseContext(), MainActivitySmall.class);
                         intent4.putExtra("name", nameS);
                         intent4.putExtra("aday", adayS);
-                        intent4.putExtra("time222",alert_often.getText());
+                        intent4.putExtra("time222",textView_Date.getText());
                         startActivity(intent4);
                     }
                 }
@@ -155,8 +167,8 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent2);
                 break;
             case R.id.btn_alert_often:
-                Intent intent1 = new Intent(getBaseContext(), HowMuchADay.class);
-                startActivity(intent1);
+                TimePickerDialog dialog = new TimePickerDialog(this, callbackMethod, 8, 10, true);
+                dialog.show();
                 break;
             case R.id.btn_measure:
                 Intent intent22 = new Intent(getBaseContext(), MeasureActivity.class);
@@ -196,8 +208,7 @@ public class SettingActivity extends AppCompatActivity {
                 alertDialog1.show();
                 break;
             case R.id.btn_locked:
-                AlertDialog.Builder alertDialogBuilder3 = new AlertDialog.Builder(
-                        this);
+                AlertDialog.Builder alertDialogBuilder3 = new AlertDialog.Builder(this);
                 alertDialogBuilder3
                         .setCancelable(false)
                         .setPositiveButton("아니요",
@@ -255,6 +266,24 @@ public class SettingActivity extends AppCompatActivity {
 
         }
     }
+
+    public void InitializeView()
+    {
+        textView_Date = (TextView)findViewById(R.id.tv_alert_often);
+    }
+
+    public void InitializeListener()
+    {
+        callbackMethod = new TimePickerDialog.OnTimeSetListener()
+        {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute)
+            {
+                textView_Date.setText(hourOfDay + "시 " + minute + "분");
+            }
+        };
+    }
+
 
 
 
